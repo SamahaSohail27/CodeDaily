@@ -1,6 +1,15 @@
 #You are given a grid containing obstacles. 
 #Find path to reach at goal in minimum moves. In one move you can move at entire row or column 
 #untill you reach at edge or obstacle.
+#start 0 0
+#goal 0 2
+arr=[
+#     ['.','X','.'],
+#     ['.','X','.'],
+#     ['.','.','.']
+    
+#     ]
+#in this case minimum moves are 3 to reach at goal
 import copy         
 def findPath(matrix,m,n,pr,pc,r,c,moves,gr,gc):
     matrix[r][c]='X'
