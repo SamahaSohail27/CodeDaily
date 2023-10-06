@@ -1,3 +1,6 @@
+#You are given a grid containing obstacles. 
+#Find path to reach at goal in minimum moves. In one move you can move at entire row or column 
+#untill you reach at edge or obstacle.
 import copy         
 def findPath(matrix,m,n,pr,pc,r,c,moves,gr,gc):
     matrix[r][c]='X'
