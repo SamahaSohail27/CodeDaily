@@ -8,6 +8,7 @@ def fib(n):
             dp[n - 1] = helper(n - 1)
         if dp[n - 2] == -1:
             dp[n - 2] = helper(n - 2)
+        dp[n]=dp[n-1]+dp[n-2]
         return dp[n - 1] + dp[n - 2]
 
     return helper(n)
