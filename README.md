@@ -1,7 +1,9 @@
 # Bellman Ford Algorithm
 - Single Source Shortest Path Algorithm
 - Dijisktra does not work on negative cycle
-- If after n-1 cycles our answer is sill changing means our graph contains negative cycyle
+- If after n-1 cycles our answer is sill changing means our graph contains negative cycle
+- Lecture Link
+  https://youtu.be/0sxWUPYFX1s?si=bSsaSQdAwtUU6fzS
 - You have to relax every edge in Bellman Ford v(no of vetices)-1 times.
 - Bellman-Ford and Dijkstra are both algorithms used to find the shortest paths in a graph, but they differ in their approach. Dijkstra's algorithm, starting from a source node, greedily selects the closest unvisited node at each step, updating the distances accordingly. It works well with non-negative edge weights and is more efficient in such cases. On the other hand, Bellman-Ford can handle graphs with negative edge weights but is less efficient. It iteratively relaxes all edges in each iteration, potentially discovering shorter paths.
 
