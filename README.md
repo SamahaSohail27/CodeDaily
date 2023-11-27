@@ -1,10 +1,11 @@
 # Jhonson's Algorithm
-- Combination of Bellman Ford and Dijistra Algorithm
+- Combination of Bellman-Ford and Dijkstra Algorithm
 - Lecture Link
+  https://youtu.be/MV7EAD9zL64?si=ubhhLOKUNrrV6ksk
   https://www.youtube.com/watch?v=x5hm5dPv1Ig
 - Step 1:
   -
-  - Add extra source vertex in graph . Connect every Vertex with this new vertex with 0 weight. We re adding the source vertex to eliminate any negative weight
+  - Add extra source vertex in the graph. Connect every Vertex with this new vertex with 0 weight. We are adding the virtual source vertex because if we use any other vertex as the source vertex then it might be possible that we do not reach any vertex through this source vertex.
 - Step 2:
-  - Apply Bellman Ford to eliminate neagtive values and convert into positive weight edges. We can also say re weighting negative edges
+  - Apply Bellman-Ford's algo and update the weights 
   - 
