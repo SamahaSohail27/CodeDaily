@@ -1,1 +1,15 @@
-# CodeDaily
+# Sparese Matrix
+- Lecture Link:
+- Lower Left Triangular Matrix
+  - https://youtu.be/KH6RfLQUqWI?si=2tMhLMouvsmlNjzE
+  - i is alwasy greater than j for non zero elements.
+  - For nxn matrix the number of non zero elements will be
+    - 1+2+3+4+......+n=n(n+1)/2
+  - For nxn matrix the number of zero elements will be
+    - n^2 - n(n+1)/2 = n(n-1)/2
+  - To store them in memory we do not ned to store zero elements .
+    - If want to store them in row by row then use Row Major Method
+      - Mapping 2d to 1D:
+         - To go to any row  r we now there are r-1 rows before this row and number of elements in these rows will be r(r+1)/2
+         - After that now check to which column you want to move for example if want to move to  column number 3 means 2 columns we have to skip so add this also
+         - c+r(r+1)/2
