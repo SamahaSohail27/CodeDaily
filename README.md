@@ -1,6 +1,6 @@
 # Bellman Ford Algorithm
 - Single Source Shortest Path Algorithm
-- Dijisktra does not work on negative cycle
+- Dijisktra does not work on negative cycle.
 - If after n-1 cycles our answer is sill changing means our graph contains negative cycle
 - Lecture Link
   https://youtu.be/0sxWUPYFX1s?si=bSsaSQdAwtUU6fzS
