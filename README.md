@@ -10,6 +10,6 @@
   - To store them in memory we do not ned to store zero elements .
     - If want to store them in row by row then use Row Major Method
       - Mapping 2d to 1D:
-         - To go to any row  r we now there are r-1 rows before this row and number of elements in these rows will be r(r+1)/2
+         - To go to any row  r we now there are r-1 rows before this row and number of elements in these rows will be r(r-1)/2
          - After that now check to which column you want to move for example if want to move to  column number 3 means 2 columns we have to skip so add this also
-         - c+r(r+1)/2
+         - (c-1) + r(r-1)/2
