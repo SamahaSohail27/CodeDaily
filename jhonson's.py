@@ -1,6 +1,5 @@
 from collections import defaultdict
 MAX_INT = float('Inf')
-
 def minDistance(dist, visited):
     (minimum, minVertex) = (MAX_INT, 0)
     for vertex in range(len(dist)):
@@ -29,49 +28,45 @@ def Dijkstra(graph, modifiedGraph, src):
     for vertex in range(num_vertices):
         print('Vertex ' + str(vertex) + ': ' + str(dist[vertex]))
 
-def BellmanFord(edges, graph, num_vertices):
+def BellmanFord(edges, num_vertices):
     dist = [MAX_INT] * (num_vertices + 1)
     dist[num_vertices] = 0
-
+   ## Add edges from the virtual source to every other vertex
     for i in range(num_vertices):
         edges.append([num_vertices, i, 0])
 
     for i in range(num_vertices):
         for (src, des, weight) in edges:
-            if (dist[src] != MAX_INT and
-                    dist[src] + weight < dist[des]):
+            if (dist[src] != MAX_INT and  dist[src] + weight < dist[des]):
                 dist[des] = dist[src] + weight
 
     return dist[0:num_vertices]
 
-def JohnsonAlgorithm(graph):
-    edges = []
+def JohnsonAlgorithm(edges, num_vertices):
+    modifyWeights = BellmanFord(edges, num_vertices)
 
-    for i in range(len(graph)):
-        for j in range(len(graph[i])):
-            if graph[i][j] != 0:
-                edges.append([i, j, graph[i][j]])
+    modifiedGraph = [[0 for x in range(num_vertices)] for y in range(num_vertices)]
 
-    modifyWeights = BellmanFord(edges, graph, len(graph))
-
-    modifiedGraph = [[0 for x in range(len(graph))] for y in range(len(graph))]
-
-    for i in range(len(graph)):
-        for j in range(len(graph[i])):
-            if graph[i][j] != 0:
-                modifiedGraph[i][j] = (graph[i][j] +
-                                       modifyWeights[i] - modifyWeights[j])
+    for src, des, weight in edges:
+        modifiedGraph[src][des] = (weight + modifyWeights[src] - modifyWeights[des])
 
     print('Modified Graph: ' + str(modifiedGraph))
 
-    for src in range(len(graph)):
+    for src in range(num_vertices):
         print('\nShortest Distance with vertex ' +
               str(src) + ' as the source:\n')
         Dijkstra(graph, modifiedGraph, src)
 
-graph = [[0, -5, 2, 3],
-         [0, 0, 4, 0],
-         [0, 0, 0, 1],
-         [0, 0, 0, 0]]
+# Example input for edges
+edges = [
+    [0, 1, -5],
+    [0, 2, 2],
+    [0, 3, 3],
+    [1, 2, 4],
+    [2, 3, 1]
+]
 
-JohnsonAlgorithm(graph)
+# Example number of vertices
+num_vertices = 4
+
+JohnsonAlgorithm(edges, num_vertices)
