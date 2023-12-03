@@ -15,3 +15,8 @@ To balance both profit and weight, we should use an approach that considers both
 - Object 2: Weight (w) = 8, Profit (p) = 32, Ratio = 4
 
 In this example, the objects with a higher ratio have less weight and greater profit compared to other objects. Therefore, selecting objects based on this ratio helps us achieve the goal of maximizing profit while considering weight.
+
+# 0/1 KanpSack
+- Fraction of object is not allowed
+- Lecture Link:
+  - https://youtu.be/hQvi9DJYiHI?si=Iv36XIEMqf2bnMev
