@@ -1,5 +1,4 @@
-# CodeDaily
-Construct binary tree form inorder and postorder:
+# Construct binary tree form inorder and postorder:
 Algorithm
 1. Start from the end of postorder & pick an element to create a node
 2. Decrement postorder idx
