@@ -10,6 +10,6 @@ Algorithm
 
 Basically we take root node from preorder or post order then go to inorder and find its right and left nodes. If root has no element on left or right side it means they have no left or right node.
 
-construct binary tree from preorder and postorder
+# Construct binary tree from preorder and postorder
 https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/
 
